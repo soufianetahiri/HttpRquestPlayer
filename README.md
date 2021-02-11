@@ -1,6 +1,6 @@
 
 ## What is it?
-This utility could help you to find authorization bugs. Just edit *request.json* by providing for exmple a high and a low  priviliged user's requests headers, paths to scan and thats it. The tool will proceed to requests with both headers and hilight diffirent http response.
+This utility that could help you to find authorization bugs. Just edit request.json by providing for example a high and a low privileged user's requests headers, paths to scan, and that's it. The tool will proceed to requests with both headers and highlight different HTTP responses
 
 For now, it supports only GET.
 
