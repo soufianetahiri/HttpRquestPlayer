@@ -1,0 +1,32 @@
+{
+  "baseUrl": "https://www.target.someurl.com",
+  "originalHeaders": [
+    "Host: www.target.someurl.com",
+    "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0",
+    "Accept: application/json",
+    "Accept-Language: en-US,en;q=0.5",
+    "Accept-Encoding: gzip, deflate, br",
+    "Referer: https://www.someurl.com",
+    "Authorization: Bearer AdminToken",
+    "Connection: keep-alive",
+    "Cookie: cookie1=random; cookie2=random"
+  ],
+  "newHeaders": [
+    "Host: www.target.someurl.com",
+    "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0",
+    "Accept: application/json",
+    "Accept-Language: en-US,en;q=0.5",
+    "Accept-Encoding: gzip, deflate, br",
+    "Referer: https://www.someurl.com",
+    "Authorization: Bearer SimpleUserToken",
+    "Connection: keep-alive",
+    "Cookie: cookie1=random2; cookie2=random2"
+  ],
+  "requests": {
+    "get": [
+      "/api/v1/users/me/dashboard",
+      "/api/v1/campaigns/kpis/chart",
+      "/api/v1/users/4623"
+    ]
+  }
+}

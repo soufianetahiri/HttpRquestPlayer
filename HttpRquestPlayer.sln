@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpRquestPlayer", "HttpRquestPlayer\HttpRquestPlayer.csproj", "{BDF36EA8-154B-4767-A621-DA28B8AB4321}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDF36EA8-154B-4767-A621-DA28B8AB4321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF36EA8-154B-4767-A621-DA28B8AB4321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF36EA8-154B-4767-A621-DA28B8AB4321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF36EA8-154B-4767-A621-DA28B8AB4321}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30E6DCC7-F6BC-41D5-B8FC-38556AFC8412}
+	EndGlobalSection
+EndGlobal
