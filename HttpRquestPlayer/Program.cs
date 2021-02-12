@@ -25,50 +25,76 @@ namespace HttpRquestPlayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine(ex.Message);
             }
         }
 
         static async Task ProcessRequests(RequestModel request)
         {
-            HttpClient client = new HttpClient();
-
-            if (request.requests?.Count > 0)
-            {
-                foreach (KeyValuePair<string, List<string>> keyValuePair in request.requests)
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback +=
+                (sender, certificate, chain, errors) =>
                 {
-                    switch (keyValuePair.Key)
-                    {
-                        //TODO add other methods (POST PUT DELETE...)
-                        case _get:
-                            if (keyValuePair.Value?.Count > 0)
-                            {
-                                foreach (string reqPath in keyValuePair.Value)
-                                {
+                    return true;
+                };
 
-                                    string url = string.Concat(request.baseUrl, reqPath);
-                                    Console.WriteLine($"Testing URL {url} :");
-                                    ProcessHeaders(request, true, client);
-                                    HttpResponseMessage response = await client.GetAsync(url).ConfigureAwait(true);
-                                    Console.WriteLine($"Original Headers:  {response.StatusCode} ({(int)response.StatusCode})");
-                                    ProcessHeaders(request, false, client);
-                                    HttpResponseMessage response2 = await client.GetAsync(url).ConfigureAwait(true);
-                                    if ((int)response.StatusCode != (int)response2.StatusCode)
-                                    {
-                                        Console.BackgroundColor = ConsoleColor.Yellow;
-                                        Console.ForegroundColor = ConsoleColor.Black;
-                                    }
-                                    Console.WriteLine($"Modified Headers: {response2.StatusCode}({(int)response2.StatusCode})");
-                                    Console.ResetColor();
-                                }
-                            }
-                            break;
-                        default:
-                            break;
+            HttpClient client = new HttpClient(clientHandler);
+            if (request.requests != null)
+            {
+                //Process GETs
+                if (request.requests.get?.Count > 0)
+                {
+                    Helper.Write($"Processing {request.requests.get?.Count} GET requests", ConsoleColor.Gray, ConsoleColor.Black);
+                    foreach (string reqPath in request.requests.get)
+                    {
+                        string url = string.Concat(request.baseUrl, reqPath);
+                        Console.WriteLine($"{url} =>");
+                        ProcessHeaders(request, true, client);
+                        HttpResponseMessage response = await client.GetAsync(url).ConfigureAwait(true);
+                        Console.WriteLine($"Original Headers:  {response.StatusCode} ({(int)response.StatusCode})");
+                        ProcessHeaders(request, false, client);
+                        HttpResponseMessage response2 = await client.GetAsync(url).ConfigureAwait(true);
+                        WriteResults(response, response2);
+                    }
+                }
+                //Process Post
+                if (request.requests.withBodies?.post?.bodies?.Count > 0 && request.requests.withBodies?.post?.urls?.Count > 0)
+                {
+                    Helper.Write($"Processing {request.requests.withBodies.post.bodies.Count} POST requests", ConsoleColor.Gray, ConsoleColor.Black);
+                    for (int i = 0; i < request.requests.withBodies.post.bodies.Count; i++)
+                    {
+                        ProcessHeaders(request, true, client);
+                        string reqPath = request.requests.withBodies.post.urls[i];
+                        StringContent reqBody = new StringContent(request.requests.withBodies.post.bodies[i], Encoding.UTF8, "application/json");
+                        string url = string.Concat(request.baseUrl, reqPath);
+                        Console.WriteLine($"{url} =>");
+                        ProcessHeaders(request, true, client);
+                        HttpResponseMessage response = await client.PostAsync(url, reqBody).ConfigureAwait(true);
+                        Console.WriteLine($"Original Headers:  {response.StatusCode} ({(int)response.StatusCode})");
+                        ProcessHeaders(request, false, client);
+                        HttpResponseMessage response2 = await client.PostAsync(url, reqBody).ConfigureAwait(true);
+                        WriteResults(response, response2);
                     }
                 }
             }
             client.Dispose();
+        }
+
+        private static void WriteResults(HttpResponseMessage response, HttpResponseMessage response2)
+        {
+            if ((int)response.StatusCode != (int)response2.StatusCode && !response2.IsSuccessStatusCode)
+            {
+                Helper.Write($"Modified Headers: {response2.StatusCode}({(int)response2.StatusCode})", ConsoleColor.Yellow, ConsoleColor.Black);
+            }
+            else if ((int)response.StatusCode != (int)response2.StatusCode && response2.IsSuccessStatusCode)
+            {
+                Helper.Write($"Modified Headers: {response2.StatusCode}({(int)response2.StatusCode})", ConsoleColor.Green, ConsoleColor.Black);
+            }
+            else
+            {
+                Console.WriteLine($"Modified Headers: {response2.StatusCode}({(int)response2.StatusCode})");
+            }
+
         }
 
         private static void ProcessHeaders(RequestModel request, bool isOriginalRequest, HttpClient client)
@@ -92,9 +118,9 @@ namespace HttpRquestPlayer
             static string GetHeaderValue(string header)
             {
                 //Request headers must contain only ASCII characters
-                byte[] bytes = Encoding.ASCII.GetBytes(header.Substring(header.IndexOf(":")).StartsWith(":") ? // in case
-                        header.Substring(header.IndexOf(":")).Remove(0, 1) :// a header vakue
-                        header.Substring(header.IndexOf(":")));// contains a ":"
+                byte[] bytes = Encoding.ASCII.GetBytes(header[header.IndexOf(":")..].StartsWith(":") ? // in case
+                        header[header.IndexOf(":")..].Remove(0, 1) :// a header vakue
+                        header[header.IndexOf(":")..]);// contains a ":"
                 return Encoding.ASCII.GetString(bytes);
             }
         }
