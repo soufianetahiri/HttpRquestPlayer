@@ -1,32 +1,55 @@
 {
-  "baseUrl": "https://www.target.someurl.com",
+  "baseUrl": "https://www.search.relevancadvertising.com/",
   "originalHeaders": [
-    "Host: www.target.someurl.com",
+    "Host: www.search.relevancadvertising.com",
     "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0",
     "Accept: application/json",
     "Accept-Language: en-US,en;q=0.5",
     "Accept-Encoding: gzip, deflate, br",
-    "Referer: https://www.someurl.com",
-    "Authorization: Bearer AdminToken",
+    "Referer: https://www.search.relevancadvertising.com/insertionorders?filter=%7B%7D",
+    "Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjA1MzZFRTZEN0FDNUY1NDBGMEY4ODcyQjI2QUE3N0UxNDk1RjJCMkEiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJCVGJ1YlhyRjlVRHctSWNySnFwMzRVbGZLeW8ifQ.eyJuYmYiOjE2MTMwNTg3OTEsImV4cCI6MTYxMzA2MjM5MSwiaXNzIjoiaHR0cHM6Ly93d3cuc2VhcmNoLnJlbGV2YW5jYWR2ZXJ0aXNpbmcuY29tL2lkZW50aXR5IiwiYXVkIjpbImh0dHBzOi8vd3d3LnNlYXJjaC5yZWxldmFuY2FkdmVydGlzaW5nLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJjYXJzLWZyb250LWFwaSJdLCJjbGllbnRfaWQiOiJjYXJzLWZyb250LWNsaWVudCIsInN1YiI6IjQ2MjMiLCJhdXRoX3RpbWUiOjE2MTMwMzY5OTUsImlkcCI6IkFEIiwicm9sZSI6WyJBZHZlcnRpc2VyRWRpdCIsIkFkdmVydGlzZXJSZWFkIiwiQWdlbmN5RWRpdCIsIkFnZW5jeVJlYWQiLCJCdWRnZXRBY3RpdmF0ZSIsIkJ1ZGdldENyZWF0ZSIsIkJ1ZGdldEVkaXQiLCJCdWRnZXRSZWFkIiwiQ2FtcGFpZ25BY3RpdmF0ZSIsIkNhbXBhaWduQmFzaWNJbmZvcm1hdGlvblJlYWQiLCJDYW1wYWlnbkVkaXQiLCJDYW1wYWlnbkxpbmVJdGVtTGlzdFJlYWQiLCJDYW1wYWlnblJlYWQiLCJDYW1wYWlnblJlY2FwUmVhZCIsIkNyZWRpdEFjdGl2YXRlIiwiQ3JlZGl0Q3JlYXRlIiwiQ3JlZGl0RWRpdCIsIkNyZWRpdFJlYWQiLCJMaW5lSXRlbUFjdGl2YXRlIiwiTGluZUl0ZW1CYXNpY0luZm9ybWF0aW9uRWRpdCIsIkxpbmVJdGVtQmlkQWNvc0VkaXQiLCJMaW5lSXRlbUJpZEVkaXQiLCJMaW5lSXRlbURlbGV0ZSIsIkxpbmVJdGVtRmlyc3RBY3RpdmF0ZSIsIkxpbmVJdGVtR3VpZGVsaW5lIiwiTGluZUl0ZW1LZXlXb3JkQXV0b0VkaXQiLCJMaW5lSXRlbUtleVdvcmRNYW51YWxFZGl0IiwiTGluZUl0ZW1Qcm9kdWN0QXV0b0VkaXQiLCJMaW5lSXRlbVByb2R1Y3RNYW51YWxFZGl0IiwiTGluZUl0ZW1SZWFkIiwiTGluZUl0ZW1UYXJnZXRFZGl0IiwiUG9ydGZvbGlvRWRpdCIsIlBvcnRmb2xpb01lcmdlIiwiUG9ydGZvbGlvUmVhZCIsIlBvcnRmb2xpb1VzZXJSZWFkIiwiUHJvZHVjdEVkaXQiLCJQcm9kdWN0U2VsZWN0IiwiUm9sZUVkaXQiLCJSb2xlUmVhZCIsIlVzZXJBZHZlcnRpc2VyRWRpdCIsIlVzZXJBZHZlcnRpc2VyUmVhZCIsIlVzZXJBZ2VuY3lFZGl0IiwiVXNlckFnZW5jeVJlYWQiLCJVc2VyQnVzaW5lc3N1bml0RWRpdCIsIlVzZXJCdXNpbmVzc3VuaXRSZWFkIiwiQ3JlZGl0SW1wb3J0IiwiQ3JlZGl0RXhwb3J0IiwiUm9sZS1BZG1pbmlzdHJhdG9yIl0sImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InNvdWZpYW5lLnRhaGlyaUBjZGlzY291bnQuY29tIiwiRW50aXR5VHlwZSI6ImJ1c2luZXNzVW5pdCIsInNjb3BlIjpbIm9wZW5pZCIsImNhcnMtZnJvbnQtYXBpIl0sImFtciI6WyJleHRlcm5hbCJdfQ.LIEIbyskYYxSl4eyY1AIBGmRmZsl0bS-dYwK8X5ubU-gZqqOxyceceU11AIA-GetZhmJnwIRMd2FTsyZm4TOh3r1ZfSdvGOXDuzoJ48be8OSh2VXKstESwsB1L8ILe60t3AwEGKgsmCqEZP1flkPhnmhpdnRWRDMtVtRycGZuf6BfV5Hs5kFQvFHHZcRrw01KV1an6x5_ovNbBiENFvIZd0VdSsJJFgd0sLPmsgb_YC-vpkPeM-Oryx41rjH9m2QPQpr13Tbk9vjObguxPo1o5C0Cqq9iXOPv8DsSaTFhGGu2-BSVjANWRi99gTNlBT2iqSMBycc8va3CC9grMZNwg",
+    "Request-Id: |568efb35-8dce-46d1-a5f9-e327a5d72ab4.4_",
     "Connection: keep-alive",
-    "Cookie: cookie1=random; cookie2=random"
+    "Cookie: visid_incap_2398301=ZY9WIIimSW2Q1kahtKL80iDyJGAAAAAAQUIPAAAAAABxeVggDP2SfSYXIspjGPV/; ai_user=A7iZH|2021-02-11T09:00:18.387Z; _ga=GA1.2.179138888.1613034019; _gid=GA1.2.341695633.1613034019; incap_ses_1175_2398301=UhWrfoLV0zfkomkphXBOEIP9JGAAAAAAZuhMwJOjxYCbFOyI/ozFVg==; cars-provider=AD; rfsession=kIwmDVw/7UPgraHCoe4QeIEU3DBP+mrohFHtV7qX/iPT4uZdxkoI2NqCAyQxq6aTEB0LaBd/tXbBn809A7FYLVf/Cq/7i0y/djlVkKmP3eHaCO/wJbdnfD8c4T3gDPiKsJCmYFIH0Mp3IcgwTh7EtWtg1L/yAp57mblOzTIbWrl8LXz96EvnRaz2fl50J4akL4GrcvS2Ys3XiAChxR282oH3FQ%3D%3D; incap_ses_390_2398301=ZkTWXbk00GAN4FIwPo9pBUtPJWAAAAAAJM9Lfybo1cjbOvMay08Xew==; _gat=1; ai_session=PQfKO|1613058792718|1613059959648.925"
   ],
   "newHeaders": [
-    "Host: www.target.someurl.com",
+    "Host: www.search.relevancadvertising.com",
     "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0",
     "Accept: application/json",
     "Accept-Language: en-US,en;q=0.5",
     "Accept-Encoding: gzip, deflate, br",
-    "Referer: https://www.someurl.com",
-    "Authorization: Bearer SimpleUserToken",
+    "Referer: https://www.search.relevancadvertising.com/",
+    "Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjA1MzZFRTZEN0FDNUY1NDBGMEY4ODcyQjI2QUE3N0UxNDk1RjJCMkEiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJCVGJ1YlhyRjlVRHctSWNySnFwMzRVbGZLeW8ifQ.eyJuYmYiOjE2MTMwNTk0MDcsImV4cCI6MTYxMzA2MzAwNywiaXNzIjoiaHR0cHM6Ly93d3cuc2VhcmNoLnJlbGV2YW5jYWR2ZXJ0aXNpbmcuY29tL2lkZW50aXR5IiwiYXVkIjpbImh0dHBzOi8vd3d3LnNlYXJjaC5yZWxldmFuY2FkdmVydGlzaW5nLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJjYXJzLWZyb250LWFwaSJdLCJjbGllbnRfaWQiOiJjYXJzLWZyb250LWNsaWVudCIsInN1YiI6IjQ2MjIiLCJhdXRoX3RpbWUiOjE2MTMwNDg3NTUsImlkcCI6IkFEQjJDIiwicm9sZSI6WyJVc2VyQWR2ZXJ0aXNlclJlYWQiLCJVc2VyQWR2ZXJ0aXNlckVkaXQiLCJQcm9kdWN0U2VsZWN0IiwiTGluZUl0ZW1CYXNpY0luZm9ybWF0aW9uRWRpdCIsIkxpbmVJdGVtUmVhZCIsIkxpbmVJdGVtUHJvZHVjdE1hbnVhbEVkaXQiLCJMaW5lSXRlbVByb2R1Y3RBdXRvRWRpdCIsIkxpbmVJdGVtS2V5V29yZEF1dG9FZGl0IiwiTGluZUl0ZW1LZXlXb3JkTWFudWFsRWRpdCIsIkxpbmVJdGVtQmlkRWRpdCIsIkxpbmVJdGVtR3VpZGVsaW5lIiwiQ2FtcGFpZ25SZWNhcFJlYWQiLCJMaW5lSXRlbURlbGV0ZSIsIkNhbXBhaWduRWRpdCIsIkNhbXBhaWduQmFzaWNJbmZvcm1hdGlvblJlYWQiLCJDYW1wYWlnbkxpbmVJdGVtTGlzdFJlYWQiLCJDYW1wYWlnbkFjdGl2YXRlIiwiQ2FtcGFpZ25SZWFkIiwiTGluZUl0ZW1BY3RpdmF0ZSIsIkJ1ZGdldENyZWF0ZSIsIkJ1ZGdldEVkaXQiLCJCdWRnZXRSZWFkIiwiQ3JlZGl0UmVhZCIsIlJvbGVSZWFkIiwiQWdlbmN5UmVhZCIsIkFkdmVydGlzZXJSZWFkIiwiQ3JlZGl0RXhwb3J0IiwiUm9sZS1BZHZlcnRpc2VyQWRtaW5pc3RyYXRvciJdLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJwZW50ZXN0Y2FyczNAZ21haWwuY29tIiwiRW50aXR5VHlwZSI6ImFkdmVydGlzZXIiLCJFbnRpdHlJZCI6IjMxMjAiLCJzY29wZSI6WyJvcGVuaWQiLCJjYXJzLWZyb250LWFwaSJdLCJhbXIiOlsiZXh0ZXJuYWwiXX0.NDJG_HRNqoV3GK0RuH3FJm3DyHuN54_0YfbbYuxjup8H89GnvzThAE2tPIBT1cRkBW7aiRTd_eQFIAP8hoThjRFUu5Ctwj4n2nzmpWYHXPtzR9CUbhHEW3wOf7ncj7MMruCilirrie30yu2RLjDldH25UgqVm5_b50xRXI1ILf6lnZAZD__qKyIou1iYpX_iqReU32SXXbj07wHylOWtLpu27iM3i5a4wZ65YxcJ4zmfJ_lpWRcyBF3dP3PKJyuUNbZC6SG3aPRm_njlL9k9RmB-G3FIp5vhy-w12SFT80cIZgIv-qcJxCE8anb5OJXS-DLUPB0LMBcBRpMUiyqt2Q",
+    "Request-Id: |4516c953-a56d-4c4d-bd43-62bb603ea60e.3_",
     "Connection: keep-alive",
-    "Cookie: cookie1=random2; cookie2=random2"
+    "Cookie: visid_incap_2398301=Yp/wk3tSSpeng/QsbfqEva8rJWAAAAAAQUIPAAAAAAB5HMYnOnf6LyNzNxGXZne1; incap_ses_390_2398301=kyK6FAWxfxpeJ1gwPo9pBU1VJWAAAAAAcOUgYXQJZolTK/XOSev+Fg==; ai_user=NBnk/|2021-02-11T13:05:52.454Z; _ga=GA1.2.911293731.1613048753; _gid=GA1.2.2017436423.1613048753; cars-provider=ADB2C; rfsession=YChEWnBqMB34PA/2F9udQgHAgdBR9aV5B+yllTANnw8TDb/DlGEsAEWCgeVcSbtfA7VNG53WvtEOf97ZAbZIcjArF1YnU0bskr+kEQkmd4kALQBW7+WfRtxBn6ZxtMmwLwaN5iGJxONulf85dPOlHu59WPiTylqub/5Dr+qxb8d8LXwyk+xOUhqH1BBKg6CU5TBQrEmU3qBY30RIfxIvJaRi4g%3D%3D; rfuuid=3120_4622; ai_session=8wWw+|1613059407858|1613060006546; _gat=1",
+    "TE: Trailers"
   ],
   "requests": {
     "get": [
       "/api/v1/users/me/dashboard",
       "/api/v1/campaigns/kpis/chart",
       "/api/v1/users/4623"
-    ]
+    ],
+    "withBodies": {
+      "post": {
+        "urls": [
+          "/api/v1/advertisers/3120/users/"
+        ],
+        "bodies": [
+          "{ \"lastName\":\"PenTestPE?\",\"firstName\":\"Soufiane\",\"email\":\"pentestcars3333@gmail.com\",\"creationDate\":\"0001-01-01T00:00:00\",\"isActive\":true,\"roles\":[4],\"permissions\":[\"AdvertiserEdit\",\r\n    \"AdvertiserRead\",\r\n    \"AgencyEdit\",\r\n    \"AgencyRead\",\r\n    \"BudgetActivate\",\r\n    \"BudgetCreate\",\r\n    \"BudgetEdit\",\r\n    \"BudgetRead\",\r\n    \"CampaignActivate\",\r\n    \"CampaignBasicInformationRead\",\r\n    \"CampaignEdit\",\r\n    \"CampaignLineItemListRead\",\r\n    \"CampaignRead\",\r\n    \"CampaignRecapRead\",\r\n    \"CreditActivate\",\r\n    \"CreditCreate\",\r\n    \"CreditEdit\",\r\n    \"CreditRead\",\r\n    \"LineItemActivate\",\r\n    \"LineItemBasicInformationEdit\",\r\n    \"LineItemBidAcosEdit\",\r\n    \"LineItemBidEdit\",\r\n    \"LineItemDelete\",\r\n    \"LineItemFirstActivate\",\r\n    \"LineItemGuideline\",\r\n    \"LineItemKeyWordAutoEdit\",\r\n    \"LineItemKeyWordManualEdit\",\r\n    \"LineItemProductAutoEdit\",\r\n    \"LineItemProductManualEdit\",\r\n    \"LineItemRead\",\r\n    \"LineItemTargetEdit\",\r\n    \"PortfolioEdit\",\r\n    \"PortfolioMerge\",\r\n    \"PortfolioRead\",\r\n    \"PortfolioUserRead\",\r\n    \"ProductEdit\",\r\n    \"ProductSelect\",\r\n    \"RoleEdit\",\r\n    \"RoleRead\",\r\n    \"UserAdvertiserEdit\",\r\n    \"UserAdvertiserRead\",\r\n    \"UserAgencyEdit\",\r\n    \"UserAgencyRead\",\r\n    \"UserBusinessunitEdit\",\r\n    \"UserBusinessunitRead\",\r\n    \"CreditImport\",\r\n    \"CreditExport\",\r\n    \"Role-Administrator\"],\"entityType\":\"businessUnit\",\"entityId\":3120,\"preference\":{\"culture\":\"fr\",\"isMailAlertEnable\":false,\"isNotificationAlertEnable\":false}}",
+          "text2"
+        ]
+      },
+      "put": {
+        "urls": [
+          "/api/v1/advertisers/3120/users/4622"
+        ],
+        "bodies": [
+          "{\"id\":4622,\"lastName\":\"PenTest\",\"firstName\":\"Soufiane\",\"email\":\"pentestcars3@gmail.com\",\"creationDate\":\"0001-01-01T00:00:00\",\"isActive\":true,\"roles\":[4],\"permissions\":[\"UserAdvertiserRead\",\"UserAdvertiserEdit\",\"ProductSelect\",\"LineItemBasicInformationEdit\",\"LineItemRead\",\"LineItemProductManualEdit\",\"LineItemProductAutoEdit\",\"LineItemKeyWordAutoEdit\",\"LineItemKeyWordManualEdit\",\"LineItemBidEdit\",\"LineItemGuideline\",\"CampaignRecapRead\",\"LineItemDelete\",\"CampaignEdit\",\"CampaignBasicInformationRead\",\"CampaignLineItemListRead\",\"CampaignActivate\",\"CampaignRead\",\"LineItemActivate\",\"BudgetCreate\",\"BudgetEdit\",\"BudgetRead\",\"CreditRead\",\"RoleRead\",\"AgencyRead\",\"AdvertiserRead\",\"CreditExport\",\"Role-AdvertiserAdministrator\"],\"entityType\":\"advertiser\",\"entityId\":3120,\"preference\":{\"culture\":\"fr\",\"isMailAlertEnable\":false,\"isNotificationAlertEnable\":false}}"
+     
+        ]
+      }
+    }
   }
 }
