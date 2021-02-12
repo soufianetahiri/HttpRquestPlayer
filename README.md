@@ -53,7 +53,7 @@ For now, It supports GET and POST .
 
 You can add as many headers as you want, the tool will parse and add them to the httpclient automatically.
 ## Output sample
-![enter image description here](https://soufiane.website/imgs/httprequestplayer.jpg)
+![enter image description here](https://soufiane.website/imgs/httprequestplayer_.jpg)
 ## ToDo
 
  - [ ] Handle exceptions  
